@@ -14,3 +14,7 @@ puts "There will be #{cars_not_driven} empty cars today." # cars_not_driven is t
 puts "We can transport #{carpool_capacity} people today." # carpool_capacity is the variable made up of cars_driven which is equal to drivers (30) times space_in_a_car (4.0)
 puts "We have #{passengers} to carpool today." # passengers is the variable = to 90
 puts "We need to put about #{average_passengers_per_car} in each car." # average_passengers_per_car is the variable made up of passengers (90) divided by cars_driven a variable made up of drivers (30)
+# zed got an error because he wrote out carpool_capacity and then car_pool_capacity
+# you need to specify a floating point because we are using calculations with remainders
+# = assigns a variable, == means something is equal to something else
+# and under_score links names together
