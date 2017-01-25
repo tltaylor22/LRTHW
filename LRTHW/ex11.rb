@@ -15,3 +15,6 @@ puts "How old are you? "
 age = gets.chomp.to_i #.to_i converts the string to an integer for the calculation
 year = (2017 - age)
 puts "So, you were born in #{year}."
+
+# How do I get a number from someone so I can do math?
+# gets.chomp.to_i which says, "Get a string from the user, chomp off the \n, and convert it to an integer."
