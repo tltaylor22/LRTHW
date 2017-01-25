@@ -34,3 +34,7 @@ cat = 'like to eat fish that are 1\'4" long'
 days = "Mon, Tues, and Wed."
 puts "Cats #{cat} on #{days}"
 #=> Cats like to eat fish that are 1'4" long on Mon, Tues, and Wed.
+dog = '''I don\'t like cats.
+I would rather eat the cat than my food.
+Cats think they are so cool.'''
+puts dog
