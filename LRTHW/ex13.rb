@@ -16,4 +16,5 @@ puts "What comes #{second}"
 output2 = $stdin.gets.chomp
 puts "What comes #{third}"
 output3 = $stdin.gets.chomp
-puts "Oh, #{output} is first, #{output2} is second, and #{output3} is third."
+puts "Oh, #{output} is first, #{output2} is secondand #{output3} is third."
+# because if there is stuff in ARGV, the default gets method tries to treat the first one as a file and read from that. To read from the user's input (i.e., stdin) in such a situation, you have to use it $stdin.gets.chomp explicitly.
