@@ -1,8 +1,11 @@
 # Change the prompt variable to something else entirely.
+#Add another argument and use it in your script, the same way you did in the previous exercise with first, second = ARGV.
+first, second = ARGV
 user_name = ARGV.first #gets the first argument
+user_name_last = ARGV.second
 prompt = 'type your answer here: '
 
-puts "Hi #{user_name}."
+puts "Hi #{user_name}#{user_name_last}."
 puts "I'd like to ask you a few questions."
 puts "Do you like me #{user_name}? "
 puts prompt
