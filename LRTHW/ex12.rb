@@ -13,7 +13,7 @@ puts "A smaller number is #{smaller}."
 
 # Study Drill 1 = .to_f returns a floating point number (decimal)
 # Study Drill 2
-print "How much money do you have for the bill?"
+print "How much money do you have for the bill? "
 number = gets.chomp.to_f
 change = (number * 0.10)
 print "Your change is #{change}, have a nice day!"
