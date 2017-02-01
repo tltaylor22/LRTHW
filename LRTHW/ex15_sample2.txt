@@ -1,0 +1,1 @@
+This is stuff I typed into a file. It is really cool stuff. Lots and lots of fun to have in here. I think I'll keep writing. I can append a file as well to ensure I don't lose the original file.
