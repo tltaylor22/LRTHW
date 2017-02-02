@@ -33,7 +33,7 @@ class TestISBN < Minitest::Test
 		assert_equal(false, check_for_letters(booknum))
 	end
 
-	def test_if_x_must_be_at_the_end
+	def test_if_x_must_is_at_the_end
 		booknum = '1234567890x'
 		assert_equal(true, check_for_x(booknum))
 	end

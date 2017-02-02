@@ -5,7 +5,7 @@ def valid_isbn_length?(booknum)
 		true
 	else
 		false
-t	end	
+	end	
 end
 
 def isbn_no_spaces_dashes(isbn_num)
@@ -19,15 +19,13 @@ def check_for_letters(letters)
 	else
 		true
 	end
+end	
 
 def check_for_x(x_at_end)
-	x_at_end.upcase
-	if x_at_end[-1] = 'X' || x_at_end[-1] ==[0..9]
+	if x_at_end[-1].match(/[0-9 x X]/)
 		true
 	else
 		false
 	end
-
-
 
 end
