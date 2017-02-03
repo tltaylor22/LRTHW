@@ -25,12 +25,12 @@ class TestISBN < Minitest::Test
 
 	def test_remove_spaces
 		isbn_num = '123 4 5 67890'
-		assert_equal('1234567890', isbn_no_spaces_dashes(isbn_num))
+		assert_equal('1234567890', isbn_remove_spaces_dashes(isbn_num))
 	end
 
 	def test_include_all_nums_inside_string_false
 		isbn_num = '12345-67890'
-		assert_equal('1234567890', isbn_no_spaces_dashes(isbn_num))
+		assert_equal('1234567890', isbn_remove_spaces_dashes(isbn_num))
 	end
 
 	def test_check_for_letters
@@ -40,11 +40,16 @@ class TestISBN < Minitest::Test
 
 	def test_if_x_must_be_at_the_end
 		isbn_num = '1234567890x'
-		assert_equal(true, check_for_x(isbn_num))
+		assert_equal(true, check_for_x_last(isbn_num))
 	end
 
-	def test_for_symbol
-		isbn_num = '123;456$7890'
-		assert_equal(true, check_for_symbol(isbn_num))
+	# def test_check_for_symbol
+	# 	isbn_num = '123;456$7890'
+	# 	assert_equal(true, check_for_symbol(isbn_num))
+	# end
+
+	def test_isbn_is_array
+		isbn_num = '123456789'
+		assert_equal(Array, isbn_array(isbn_num))
 	end
 end	

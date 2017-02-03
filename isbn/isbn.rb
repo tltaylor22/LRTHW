@@ -1,6 +1,8 @@
 def valid_isbn?(isbn_num) # ? passing a string to get a boolean (TorF)
 valid_isbn_length(isbn_num)
-
+isbn_remove_spaces_dashes(isbn_num)
+check_for_letters(isbn_num)
+check_for_x_last(isbn_num)
 end
 
 def valid_isbn_length?(isbn_num)
@@ -11,21 +13,21 @@ def valid_isbn_length?(isbn_num)
 	end	
 end
 
-def isbn_no_spaces_dashes(isbn_num)
+def isbn_remove_spaces_dashes(isbn_num)
 	isbn_num.gsub(/[ -]/, '')
 	# OR isbn_num.delete(' ' '-') # (!) after delete makes it perminent
 end
 
 def check_for_letters(isbn_num)
-	if isbn_num.match(/[a-z A-Z]/)
+	if isbn_num.match(/[a-z A-Z]/) # checking to match lower and upper case letters in the string
 		false
 	else
 		true
 	end
 end	
 
-def check_for_x(isbn_num)
-	if isbn_num[-1].match(/[0-9 x X]/)
+def check_for_x_last(isbn_num)
+	if isbn_num[-1].match(/[0-9 x X]/) # checking that a number or x (lower or upper) are the last element of the string
 		true
 	else
 		false
@@ -33,9 +35,13 @@ def check_for_x(isbn_num)
 end	
 
 def check_for_symbol(isbn_num)
-	if isbn_num =~/\D/
+	if isbn_num == /\D/ # checking to see if there are symbols in the string. \D is the same as [^0-9] (everything except digits) - Not sure if I need to check the 9 spot using the tilde or not????
 		true
 	else
 		false
+	end
+
+def isbn_array(isbn_num)
+	isbn_array = isbn_num.split(//) # splits the string to create an array of individual numbers ["1", "2", etc]
 	end
 end	
