@@ -40,8 +40,9 @@ def check_for_symbol(isbn_num)
 	else
 		false
 	end
+end	
 
 def isbn_array(isbn_num)
 	isbn_array = isbn_num.split(//) # splits the string to create an array of individual numbers ["1", "2", etc]
-	end
+
 end	

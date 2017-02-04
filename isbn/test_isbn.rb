@@ -43,13 +43,14 @@ class TestISBN < Minitest::Test
 		assert_equal(true, check_for_x_last(isbn_num))
 	end
 
-	# def test_check_for_symbol
-	# 	isbn_num = '123;456$7890'
-	# 	assert_equal(true, check_for_symbol(isbn_num))
-	# end
-
-	def test_isbn_is_array
-		isbn_num = '123456789'
-		assert_equal(Array, isbn_array(isbn_num))
+	def test_check_for_symbol
+		isbn_num = '123;456$7890'
+		assert_equal(false, check_for_symbol(isbn_num))
 	end
+
+	def test_isbn_is_array_of_individual_numbers
+		isbn_num = '123456789'
+		assert_equal(["1", "2", "3", "4", "5", "6", "7", "8", "9"], isbn_array(isbn_num))
+	end
+
 end	
